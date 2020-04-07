@@ -1,22 +1,22 @@
 h1, p {
   font-family: Lato;
 }
-#users {
+#mobiles {
   font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
   border-collapse: collapse;
   width: 100%;
 }
 
-#users td, #users th {
+#mobiles td, #mobiles th {
   border: 1px solid #ddd;
   padding: 8px;
 }
 
-#users tr:nth-child(even){background-color: #f2f2f2;}
+#mobiles tr:nth-child(even){background-color: #f2f2f2;}
 
-#users tr:hover {background-color: #ddd;}
+#mobiles tr:hover {background-color: #ddd;}
 
-#users th {
+#mobiles th {
   padding-top: 12px;
   padding-bottom: 12px;
   text-align: left;
@@ -26,6 +26,7 @@ h1, p {
 .center {
   text-align: center;
 }
+
 ul {
   list-style-type: none;
   margin: 0;

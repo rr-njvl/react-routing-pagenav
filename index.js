@@ -10,14 +10,14 @@ import {
 
 import Nav from './Nav';
 import Home from './Home';
-import Users from './Users';
+import Products from './Products';
 import './style.css';
 
 class App extends Component {
   constructor() {
     super();
     this.state = {
-      name: 'Users Listing'
+      name: 'Products Listing'
     };
   }
 
@@ -33,7 +33,7 @@ class App extends Component {
                   <Home />
                 </Route>
                 <Route path="/users">
-                  <Users name={this.state.name} />
+                  <Products name={this.state.name} />
                 </Route>
               </Switch>
             </div>

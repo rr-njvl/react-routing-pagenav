@@ -1,15 +1,15 @@
 import React from 'react';
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 class Nav extends React.Component {
   render() {
     return (
       <ul>
         <li>
-          <Link to="/">Home</Link>
+          <NavLink exact activeClassName="active" to="/">Home</NavLink>
         </li>
         <li>
-          <Link to="/users">Users</Link>
+          <NavLink exact activeClassName="active" to="/users">Users</NavLink>
         </li>
       </ul>
     )
