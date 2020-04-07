@@ -35,9 +35,6 @@ class App extends Component {
                   <Link to="/users">Users</Link>
                 </li>
               </ul>
-
-              <hr />
-
               <Switch>
                 <Route exact path="/">
                   <Home />
