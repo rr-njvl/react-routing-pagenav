@@ -3,9 +3,7 @@ import { render } from 'react-dom';
 import {
   BrowserRouter as Router,
   Switch,
-  Route,
-  useParams,
-  useRouteMatch
+  Route
 } from "react-router-dom";
 
 import Nav from './Nav';

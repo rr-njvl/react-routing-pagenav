@@ -1,4 +1,5 @@
 import React from 'react';
+import axios from 'axios';
 import ProductListing from './ProductListing';
 
 class Products extends React.Component {
@@ -13,8 +14,16 @@ class Products extends React.Component {
     this.users = [];
   }
 
-  componentWillMount() { 
-    fetch(`https://my-json-server.typicode.com/rr-njvl/jsondata/products`)
+  componentWillMount() {
+    axios.get(`https://my-json-server.typicode.com/rr-njvl/jsondata/products`)
+    .then(res => {
+      this.setState({
+          products: res.data,
+          isLoading: false,
+        })
+    })
+
+    /*fetch(`https://my-json-server.typicode.com/rr-njvl/jsondata/products`)
       .then(response => response.json())
       .then(data =>
         this.setState({
@@ -22,7 +31,7 @@ class Products extends React.Component {
           isLoading: false,
         })
       )
-      .catch(error => this.setState({ error, isLoading: false }));
+      .catch(error => this.setState({ error, isLoading: false }));*/
   }
 
   render() {
