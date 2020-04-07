@@ -4,11 +4,11 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Link,
   useParams,
   useRouteMatch
 } from "react-router-dom";
 
+import Nav from './Nav';
 import Home from './Home';
 import Users from './Users';
 import './style.css';
@@ -27,14 +27,7 @@ class App extends Component {
         <div className="navigation">
           <Router>
             <div>
-              <ul>
-                <li>
-                  <Link to="/">Home</Link>
-                </li>
-                <li>
-                  <Link to="/users">Users</Link>
-                </li>
-              </ul>
+              <Nav />
               <Switch>
                 <Route exact path="/">
                   <Home />
