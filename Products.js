@@ -4,60 +4,50 @@ import ProductListing from './ProductListing';
 
 class Products extends React.Component {
   state = {
-    isLoading: true,
-    products: [],
-    error: null
-  };
+    products:[]
+  }
+
   constructor(props) {
-    super(props);
     this.name = props.name;
-    this.users = [];
   }
 
   componentWillMount() {
     axios.get(`https://my-json-server.typicode.com/rr-njvl/jsondata/products`)
     .then(res => {
       this.setState({
-          products: res.data,
-          isLoading: false,
-        })
+        products: res.data
+      })
     })
+    .catch(error => { alert("service failed"); });
 
     /*fetch(`https://my-json-server.typicode.com/rr-njvl/jsondata/products`)
       .then(response => response.json())
       .then(data =>
         this.setState({
-          products: data,
-          isLoading: false,
+          products: data
         })
       )
-      .catch(error => this.setState({ error, isLoading: false }));*/
+      .catch(error => { alert("service failed"); });*/
   }
 
   render() {
-    const { isLoading, products, error } = this.state;
     return (
       <div className="products">
         <div>
           <h2>{this.name}</h2>
-          <p>Display all the users in table format from external JSON service using FETCH()</p>
+          <p>Display all the users in table format from external JSON service</p>
         </div>
-        {error ? <p>{error.message}</p> : null}
-        {!isLoading ? (
-          <table id="mobiles">
+        <table id="mobiles">
             <tr>
               <th>ID</th>
               <th>Name</th>
               <th>Quantity</th>
               <th>Cost (Rupees)</th>
             </tr>
-            {products.map(prod => (
+            {this.state.products.map(prod => (
               <ProductListing product={prod} />  
             ))}
           </table>
-        ):(
-          <h3>Loading...</h3>
-        )}
       </div>
     );
   }

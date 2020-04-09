@@ -12,9 +12,9 @@ h1, p {
   padding: 8px;
 }
 
-#mobiles tr:nth-child(even){background-color: #f2f2f2;}
+#mobiles tr:nth-child(even){background-color: #cacaca;}
 
-#mobiles tr:hover {background-color: #ddd;}
+#mobiles tr:hover {background-color: #666666; color: #ffffff;}
 
 #mobiles th {
   padding-top: 12px;
