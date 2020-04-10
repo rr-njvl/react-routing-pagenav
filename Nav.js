@@ -9,7 +9,7 @@ class Nav extends React.Component {
           <NavLink exact activeClassName="active" to="/">Home</NavLink>
         </li>
         <li>
-          <NavLink exact activeClassName="active" to="/users">Users</NavLink>
+          <NavLink exact activeClassName="active" to="/users">Products</NavLink>
         </li>
       </ul>
     )

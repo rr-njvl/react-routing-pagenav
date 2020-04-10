@@ -8,7 +8,7 @@ class Products extends React.Component {
   }
 
   constructor(props) {
-    this.name = props.name;
+    this.name = props.name; 
   }
 
   componentWillMount() {
